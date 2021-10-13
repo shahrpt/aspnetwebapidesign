@@ -9,10 +9,10 @@ namespace FBG.Market.API.Repository.Product
 {
     public interface IProductRepository
     {
-        Task<IQueryable<Model.Product>> ListAsync(ProductsQuery query);
+        Task<IEnumerable<Model.Product>> ListAsync(ProductsQuery query);
         Task<Model.Product> AddAsync(Model.Product product);
         Task<Model.Product> FindByIdAsync(int id);
-        void Update(Model.Product product);
-        void Remove(Model.Product product);
+        Task<int> UpdateAsync(int id, Model.Product entity);
+        Task<int> DeleteAsync(int id);
     }
 }
