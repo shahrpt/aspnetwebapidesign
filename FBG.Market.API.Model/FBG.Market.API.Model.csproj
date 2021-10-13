@@ -47,5 +47,8 @@
     <Compile Include="User.cs" />
     <Compile Include="UserRole.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

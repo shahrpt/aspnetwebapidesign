@@ -9,9 +9,9 @@ namespace FBG.Market.API.Repository.Product
 {
     public class ProductRepository : IProductRepository
     {
-        public Task AddAsync(Model.Product product)
+        public Task<Model.Product> AddAsync(Model.Product product)
         {
-            throw new NotImplementedException();
+            return null;
         }
 
         public Task<Model.Product> FindByIdAsync(int id)

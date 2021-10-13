@@ -9,10 +9,10 @@ namespace FBG.Market.API.Service.Product
 {
     public interface IProductService
     {
-        IQueryable<Model.Product> Get();
-        Model.Product Get(int id);
-        Task<Model.Product> Create(CreateProductModel model);
+        Task<IQueryable<Model.Product>> Get();
+        Task<Model.Product> Get(int id);
+        Task<Model.Product> CreateAsync(Model.Product model);
         Task<Model.Product> Update(int id, UpdateProductModel model);
-        Task Delete(int id);
+        Task<bool> Delete(int id);
     }
 }

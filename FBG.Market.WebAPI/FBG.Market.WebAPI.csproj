@@ -285,6 +285,10 @@
       <Project>{12976a25-3ce6-4dd8-a247-d6c558893c6d}</Project>
       <Name>FBG.Market.API.Service</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FBG.Market.API.Models\FBG.Market.API.Models.csproj">
+      <Project>{7a587da6-d399-4a8d-bdfb-4882917eea8f}</Project>
+      <Name>FBG.Market.API.Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FBG.Market.API.Model\FBG.Market.API.Model.csproj">
       <Project>{457b3ea8-db27-4a28-8634-d5d256459502}</Project>
       <Name>FBG.Market.API.Model</Name>

@@ -16,22 +16,23 @@ namespace FBG.Market.API.Service.Product
         {
             _productRepository = productService;
         }
-        public Task<Model.Product> Create(CreateProductModel model)
+
+        public async Task<Model.Product> CreateAsync(Model.Product model)
+        {
+            return await _productRepository.AddAsync(model);
+        }
+
+        public Task<bool> Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task Delete(int id)
+        public Task<IQueryable<Model.Product>> Get()
         {
             throw new NotImplementedException();
         }
 
-        public IQueryable<Model.Product> Get()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Model.Product Get(int id)
+        public Task<Model.Product> Get(int id)
         {
             throw new NotImplementedException();
         }
@@ -40,8 +41,6 @@ namespace FBG.Market.API.Service.Product
         {
             throw new NotImplementedException();
         }
-
-        
     }
 
 }

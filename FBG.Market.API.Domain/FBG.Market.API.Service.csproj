@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Product\Communication\BaseResponse.cs" />
-    <Compile Include="Product\Communication\CreateProductModel.cs" />
     <Compile Include="Product\Communication\ProductResponse.cs" />
     <Compile Include="Product\Communication\RequiredAttribute.cs" />
     <Compile Include="Product\Communication\UpdateProductModel.cs" />
