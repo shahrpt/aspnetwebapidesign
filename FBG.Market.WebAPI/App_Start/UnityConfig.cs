@@ -1,4 +1,4 @@
-using FBG.Market.API.Service.Product;
+using Fbg.Market.Service.Product;
 using System.Web.Http;
 using Unity;
 using Unity.WebApi;

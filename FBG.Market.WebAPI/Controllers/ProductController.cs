@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using FBG.Market.API.Model;
-using FBG.Market.API.Models.Product;
-using FBG.Market.API.Service.Product;
+using Fbg.Market.Model;
+using Fbg.Market.Models.Product;
+using Fbg.Market.Service.Product;
 using FBG.Market.WebAPI.Maps;
 using System;
 using System.Collections.Generic;

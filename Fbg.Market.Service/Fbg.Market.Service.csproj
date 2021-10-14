@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12976A25-3CE6-4DD8-A247-D6C558893C6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fbg.Market.Service</RootNamespace>
+    <AssemblyName>Fbg.Market.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Product\Communication\BaseResponse.cs" />
+    <Compile Include="Product\Communication\ProductResponse.cs" />
+    <Compile Include="Product\Communication\RequiredAttribute.cs" />
+    <Compile Include="Product\Communication\UpdateProductModel.cs" />
+    <Compile Include="Product\IProductService.cs" />
+    <Compile Include="Product\ProductService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Client\" />
+    <Folder Include="Common\" />
+    <Folder Include="Entitlement\" />
+    <Folder Include="Role\" />
+    <Folder Include="Vendor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fbg.Market.Application\Fbg.Market.Application.csproj">
+      <Project>{f453f2ae-142a-4e26-bfce-249f2abe2b23}</Project>
+      <Name>Fbg.Market.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fbg.Market.Common\Fbg.Market.Common.csproj">
+      <Project>{43869bda-570e-4be3-805b-d964dfb2c809}</Project>
+      <Name>Fbg.Market.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fbg.Market.Infrastructure\Fbg.Market.Infrastructure.csproj">
+      <Project>{12bd3522-fcb8-4d0d-a2b0-a494cd6f2dea}</Project>
+      <Name>Fbg.Market.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fbg.Market.Models\Fbg.Market.Models.csproj">
+      <Project>{7a587da6-d399-4a8d-bdfb-4882917eea8f}</Project>
+      <Name>Fbg.Market.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Fbg.Market.Model\Fbg.Market.Model.csproj">
+      <Project>{457b3ea8-db27-4a28-8634-d5d256459502}</Project>
+      <Name>Fbg.Market.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

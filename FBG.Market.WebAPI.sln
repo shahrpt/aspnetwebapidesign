@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBG.Market.WebAPI", "FBG.Market.WebAPI\FBG.Market.WebAPI.csproj", "{EED34842-E5F1-4CBB-A453-367D7E213299}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.WebAPI", "Fbg.Market.WebAPI\Fbg.Market.WebAPI.csproj", "{EED34842-E5F1-4CBB-A453-367D7E213299}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBG.Market.API.Common", "FBG.Market.API.Common\FBG.Market.API.Common.csproj", "{43869BDA-570E-4BE3-805B-D964DFB2C809}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Common", "Fbg.Market.Common\Fbg.Market.Common.csproj", "{43869BDA-570E-4BE3-805B-D964DFB2C809}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBG.Market.API.Service", "FBG.Market.API.Domain\FBG.Market.API.Service.csproj", "{12976A25-3CE6-4DD8-A247-D6C558893C6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Service", "Fbg.Market.Service\Fbg.Market.Service.csproj", "{12976A25-3CE6-4DD8-A247-D6C558893C6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBG.Market.API.Repository", "FBG.Market.API.Data\FBG.Market.API.Repository.csproj", "{12BD3522-FCB8-4D0D-A2B0-A494CD6F2DEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Infrastructure", "Fbg.Market.Infrastructure\Fbg.Market.Infrastructure.csproj", "{12BD3522-FCB8-4D0D-A2B0-A494CD6F2DEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBG.Market.API.Model", "FBG.Market.API.Model\FBG.Market.API.Model.csproj", "{457B3EA8-DB27-4A28-8634-D5D256459502}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Model", "Fbg.Market.Model\Fbg.Market.Model.csproj", "{457B3EA8-DB27-4A28-8634-D5D256459502}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBG.Market.API.Models", "FBG.Market.API.Models\FBG.Market.API.Models.csproj", "{7A587DA6-D399-4A8D-BDFB-4882917EEA8F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Models", "Fbg.Market.Models\Fbg.Market.Models.csproj", "{7A587DA6-D399-4A8D-BDFB-4882917EEA8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Application", "Fbg.Market.Application\Fbg.Market.Application.csproj", "{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{7A587DA6-D399-4A8D-BDFB-4882917EEA8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A587DA6-D399-4A8D-BDFB-4882917EEA8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A587DA6-D399-4A8D-BDFB-4882917EEA8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
