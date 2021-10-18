@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fbg.Market.Model
+namespace Fbg.Market.DbModel
 {
-    public class Product
+    public class Product_
     {
         public int Id { get; set; }
 
@@ -16,7 +16,7 @@ namespace Fbg.Market.Model
         public string Comment { get; set; }
 
         public int UserId { get; set; }
-        public virtual User User { get; set; }
+        //public virtual User User { get; set; }
 
         public bool IsDeleted { get; set; }
     }

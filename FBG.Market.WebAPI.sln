@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Service", "Fbg.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Infrastructure", "Fbg.Market.Infrastructure\Fbg.Market.Infrastructure.csproj", "{12BD3522-FCB8-4D0D-A2B0-A494CD6F2DEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Model", "Fbg.Market.Model\Fbg.Market.Model.csproj", "{457B3EA8-DB27-4A28-8634-D5D256459502}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.DbModel", "Fbg.Market.DbModel\Fbg.Market.DbModel.csproj", "{457B3EA8-DB27-4A28-8634-D5D256459502}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Models", "Fbg.Market.Models\Fbg.Market.Models.csproj", "{7A587DA6-D399-4A8D-BDFB-4882917EEA8F}"
 EndProject

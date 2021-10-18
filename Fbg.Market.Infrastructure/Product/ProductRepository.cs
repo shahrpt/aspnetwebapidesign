@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using System.Data;
+using Fbg.Market.DbModel;
 
 namespace Fbg.Market.Repository.Product
 {
@@ -23,23 +24,23 @@ namespace Fbg.Market.Repository.Product
             : base(configuration)
         { }
 
-        public async Task<List<Model.Product>> GetAllAsync()
+        public async Task<List<Product_>> GetAllAsync()
         {
             var query = "SELECT * FROM Products";
             using (var connection = _context.CreateConnection())
             {
-                var products = await connection.QueryAsync<Model.Product>(query);
+                var products = await connection.QueryAsync<Product_>(query);
                 return products.ToList();
             }
            
         }
 
-        public Task<Model.Product> GetByIdAsync(int id)
+        public Task<Product_> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<int> CreateAsync(Model.Product entity)
+        public async Task<int> CreateAsync(Product_ entity)
         {
             var query = "INSERT INTO Products (Name, SKUCode, UPCCode) VALUES (@Name, @SkuCode, @UpcCode)" +
         "SELECT CAST(SCOPE_IDENTITY() as int)";
@@ -54,7 +55,7 @@ namespace Fbg.Market.Repository.Product
             }
         }
 
-        public async Task<int> UpdateAsync(int id, Model.Product entity)
+        public async Task<int> UpdateAsync(int id, Product_ entity)
         {
             var query = "UPDATE Products SET Name = @Name, Address = @Address, Country = @Country WHERE Id = @Id";
             var parameters = new DynamicParameters();
@@ -78,17 +79,17 @@ namespace Fbg.Market.Repository.Product
             }
         }
 
-        public async Task<IEnumerable<Model.Product>> ListAsync(ProductsQuery input)
+        public async Task<IEnumerable<Product_>> ListAsync(ProductsQuery input)
         {
             var query = "SELECT * FROM Products";
             using (var connection = _context.CreateConnection())
             {
-                var products = await connection.QueryAsync<Model.Product>(query);
+                var products = await connection.QueryAsync<Product_>(query);
                 return products;
             }
         }
 
-        public async Task<Model.Product> AddAsync(Model.Product entity)
+        public async Task<Product_> AddAsync(Product_ entity)
         {
             var query = "INSERT INTO Products (Name, SKUCode, UPCCode) VALUES (@Name, @SkuCode, @UpcCode)" +
          "SELECT CAST(SCOPE_IDENTITY() as int)";
@@ -99,11 +100,11 @@ namespace Fbg.Market.Repository.Product
             using (var connection = _context.CreateConnection())
             {
                 var id = await connection.QuerySingleAsync<int>(query, parameters);
-                return new Model.Product() { Id=id };
+                return new Product_() { Id=id };
             }
         }
 
-        public Task<Model.Product> FindByIdAsync(int id)
+        public Task<Product_> FindByIdAsync(int id)
         {
             throw new NotImplementedException();
         }

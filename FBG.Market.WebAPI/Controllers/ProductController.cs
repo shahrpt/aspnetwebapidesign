@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Fbg.Market.Model;
+using Fbg.Market.DbModel;
 using Fbg.Market.Models.Product;
 using Fbg.Market.Service.Product;
 using FBG.Market.WebAPI.Maps;
@@ -31,9 +31,9 @@ namespace FBG.Market.WebAPI.Controllers
         [System.Web.Http.HttpPost]
         public async Task<IHttpActionResult> PostAsync([FromBody] CreateProductModel resource)
         {
-            var product = _mapper.Map<CreateProductModel, Product>(resource);
+            var product = _mapper.Map<CreateProductModel, Product_>(resource);
             var result = await _productService.CreateAsync(product);
-            var productResource = _mapper.Map<Product, CreateProductModel>(result);
+            var productResource = _mapper.Map<Product_, CreateProductModel>(result);
             return Ok(productResource);
         }
         // GET api/values

@@ -1,4 +1,5 @@
-﻿using Fbg.Market.Models.Product;
+﻿using Fbg.Market.DbModel;
+using Fbg.Market.Models.Product;
 using Fbg.Market.Repository.Product;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace Fbg.Market.Service.Product
             _productRepository = productService;
         }
 
-        public async Task<Model.Product> CreateAsync(Model.Product model)
+        public async Task<Product_> CreateAsync(Product_ model)
         {
             return await _productRepository.AddAsync(model);
         }
@@ -27,17 +28,17 @@ namespace Fbg.Market.Service.Product
             throw new NotImplementedException();
         }
 
-        public Task<IQueryable<Model.Product>> Get()
+        public Task<IQueryable<Product_>> Get()
         {
             throw new NotImplementedException();
         }
 
-        public Task<Model.Product> Get(int id)
+        public Task<Product_> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Model.Product> Update(int id, UpdateProductModel model)
+        public Task<Product_> Update(int id, UpdateProductModel model)
         {
             throw new NotImplementedException();
         }

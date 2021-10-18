@@ -282,6 +282,10 @@
       <Project>{43869bda-570e-4be3-805b-d964dfb2c809}</Project>
       <Name>Fbg.Market.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Fbg.Market.DbModel\Fbg.Market.DbModel.csproj">
+      <Project>{457B3EA8-DB27-4A28-8634-D5D256459502}</Project>
+      <Name>Fbg.Market.DbModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fbg.Market.Infrastructure\Fbg.Market.Infrastructure.csproj">
       <Project>{12bd3522-fcb8-4d0d-a2b0-a494cd6f2dea}</Project>
       <Name>Fbg.Market.Infrastructure</Name>
@@ -290,13 +294,9 @@
       <Project>{7a587da6-d399-4a8d-bdfb-4882917eea8f}</Project>
       <Name>Fbg.Market.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Fbg.Market.Model\Fbg.Market.Model.csproj">
-      <Project>{457b3ea8-db27-4a28-8634-d5d256459502}</Project>
-      <Name>Fbg.Market.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Fbg.Market.Service\FBG.Market.Service.csproj">
+    <ProjectReference Include="..\Fbg.Market.Service\Fbg.Market.Service.csproj">
       <Project>{12976a25-3ce6-4dd8-a247-d6c558893c6d}</Project>
-      <Name>FBG.Market.Service</Name>
+      <Name>Fbg.Market.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
