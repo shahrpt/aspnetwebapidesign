@@ -14,5 +14,9 @@ namespace Fbg.Market.Models.Product
         {
             CategoryId = categoryId;
         }
+
+        public ProductsQuery()
+        {
+        }
     }
 }

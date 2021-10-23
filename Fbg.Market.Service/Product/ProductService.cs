@@ -12,13 +12,14 @@ namespace Fbg.Market.Service.Product
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
-        
+
+       
         public ProductService(IProductRepository productService)
         {
             _productRepository = productService;
         }
 
-        public async Task<Product_> CreateAsync(Product_ model)
+        public async Task<DbModel.Model.Product> CreateAsync(DbModel.Model.Product model)
         {
             return await _productRepository.AddAsync(model);
         }
@@ -28,17 +29,18 @@ namespace Fbg.Market.Service.Product
             throw new NotImplementedException();
         }
 
-        public Task<IQueryable<Product_>> Get()
+        public async Task<IEnumerable<DbModel.Model.Product>> Get()
+        {
+            ProductsQuery query = new ProductsQuery();
+            return await _productRepository.ListAsync(query);
+        }
+
+        public Task<DbModel.Model.Product> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Product_> Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Product_> Update(int id, UpdateProductModel model)
+        public Task<DbModel.Model.Product> Update(int id, UpdateProductModel model)
         {
             throw new NotImplementedException();
         }

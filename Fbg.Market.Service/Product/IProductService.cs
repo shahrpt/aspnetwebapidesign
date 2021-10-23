@@ -10,10 +10,10 @@ namespace Fbg.Market.Service.Product
 {
     public interface IProductService
     {
-        Task<IQueryable<Product_>> Get();
-        Task<Product_> Get(int id);
-        Task<Product_> CreateAsync(Product_ model);
-        Task<Product_> Update(int id, UpdateProductModel model);
+        Task<IEnumerable<DbModel.Model.Product>> Get();
+        Task<DbModel.Model.Product> Get(int id);
+        Task<DbModel.Model.Product> CreateAsync(DbModel.Model.Product model);
+        Task<DbModel.Model.Product> Update(int id, UpdateProductModel model);
         Task<bool> Delete(int id);
     }
 }

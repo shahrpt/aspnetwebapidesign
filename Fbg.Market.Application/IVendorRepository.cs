@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FBG.Market.Application
+namespace Fbg.Market.Application
 {
-    public class Class1
+    public interface IVendorRepository
     {
+        Task<int> Get();
+        Task<bool> Delete(int id);
     }
 }

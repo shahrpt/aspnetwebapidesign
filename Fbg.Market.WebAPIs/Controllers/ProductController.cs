@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using Fbg.Market.Application;
 using Fbg.Market.DbModel;
 using Fbg.Market.DbModel.Model;
 using Fbg.Market.Models.Product;
 using Fbg.Market.Service.Product;
-using FBG.Market.WebAPI.Maps;
+using Fbg.Market.WebAPIs.App_Start;
+using Fbg.Market.WebAPIs.AutoMap;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +14,15 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace FBG.Market.WebAPI.Controllers
+namespace FBG.Market.WebAPIs.Controllers
 {
     public class ProductController : ApiController
     {
         private readonly IProductService _productService;
-        private readonly IMapper _mapper;
         //git
-        public ProductController(IProductService productService, IMapper mapper)
+        public ProductController(IProductService productService)
         {
             _productService = productService;
-            _mapper = mapper;
         }
         /// <summary>
         /// Saves a new product.
@@ -32,14 +32,15 @@ namespace FBG.Market.WebAPI.Controllers
         [System.Web.Http.HttpPost]
         public async Task<IHttpActionResult> PostAsync([FromBody] CreateProductModel resource)
         {
-            var product = _mapper.Map<CreateProductModel, Product>(resource);
-            var result = await _productService.CreateAsync(product);
-            var productResource = _mapper.Map<Product, CreateProductModel>(result);
+            var prod = AutoMap.Mapper.Map<Product>(resource);
+            var result = await _productService.CreateAsync(prod);
+            var productResource = AutoMap.Mapper.Map<Product, CreateProductModel>(result);
             return Ok(productResource);
         }
         // GET api/values
         public async Task<IHttpActionResult> Get()
         {
+            var userDTO = AutoMap.Mapper.Map<CreateProductModel>(new CreateProductModel() { CategoryId = 1 });
             var result = await _productService.Get();
             return Json(result);
         }

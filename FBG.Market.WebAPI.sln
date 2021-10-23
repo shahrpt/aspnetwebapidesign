@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.WebAPI", "Fbg.Market.WebAPI\Fbg.Market.WebAPI.csproj", "{EED34842-E5F1-4CBB-A453-367D7E213299}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Common", "Fbg.Market.Common\Fbg.Market.Common.csproj", "{43869BDA-570E-4BE3-805B-D964DFB2C809}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Service", "Fbg.Market.Service\Fbg.Market.Service.csproj", "{12976A25-3CE6-4DD8-A247-D6C558893C6D}"
@@ -17,16 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Models", "Fbg.Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Application", "Fbg.Market.Application\Fbg.Market.Application.csproj", "{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.WebAPIs", "Fbg.Market.WebAPIs\Fbg.Market.WebAPIs.csproj", "{576180AA-38BA-4682-ACE1-F48FCB5FEC62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EED34842-E5F1-4CBB-A453-367D7E213299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EED34842-E5F1-4CBB-A453-367D7E213299}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EED34842-E5F1-4CBB-A453-367D7E213299}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EED34842-E5F1-4CBB-A453-367D7E213299}.Release|Any CPU.Build.0 = Release|Any CPU
 		{43869BDA-570E-4BE3-805B-D964DFB2C809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{43869BDA-570E-4BE3-805B-D964DFB2C809}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43869BDA-570E-4BE3-805B-D964DFB2C809}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{576180AA-38BA-4682-ACE1-F48FCB5FEC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{576180AA-38BA-4682-ACE1-F48FCB5FEC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{576180AA-38BA-4682-ACE1-F48FCB5FEC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{576180AA-38BA-4682-ACE1-F48FCB5FEC62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

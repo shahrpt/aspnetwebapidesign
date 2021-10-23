@@ -20,7 +20,7 @@ namespace Fbg.Market.Repository
 
         protected IDbConnection CreateConnection()
         {
-            return new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
+            return new SqlConnection(_configuration.GetConnectionString("FBGMarket_CS"));
         }
     }
 }

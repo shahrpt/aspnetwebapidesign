@@ -49,13 +49,13 @@
     <Compile Include="Product\IProductService.cs" />
     <Compile Include="Product\ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vendor\VendorService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Client\" />
     <Folder Include="Common\" />
     <Folder Include="Entitlement\" />
     <Folder Include="Role\" />
-    <Folder Include="Vendor\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
