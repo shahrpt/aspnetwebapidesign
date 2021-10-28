@@ -9,6 +9,7 @@ using Dapper;
 using System.Data;
 using Fbg.Market.DbModel;
 using System.Data.SqlClient;
+using Fbg.Market.Application;
 
 namespace Fbg.Market.Repository.Product
 {
@@ -36,22 +37,8 @@ namespace Fbg.Market.Repository.Product
             throw new NotImplementedException();
         }
 
-        public async Task<int> CreateAsync(DbModel.Model.Product entity)
-        {
-            var query = "INSERT INTO Products (Name, SKUCode, UPCCode) VALUES (@Name, @SkuCode, @UpcCode)" +
-        "SELECT CAST(SCOPE_IDENTITY() as int)";
-            var parameters = new DynamicParameters();
-            /*parameters.Add("Name", entity.Description, DbType.String);
-            parameters.Add("SkuCode", entity.Amount, DbType.String);
-            parameters.Add("UpcCode", entity.Comment, DbType.String);*/
-            using (var connection = CreateConnection())
-            {
-                var id = await connection.QuerySingleAsync<int>(query, parameters);
-                return id;
-            }
-        }
-
-        public async Task<int> UpdateAsync(int id, DbModel.Model.Product entity)
+       
+        public async Task<DbModel.Model.Product> UpdateAsync(int id, DbModel.Model.Product entity)
         {
             var query = @"UPDATE [dbo].[Products]
    SET [BID] = @BID
@@ -105,9 +92,13 @@ namespace Fbg.Market.Repository.Product
             parameters.Add("@PID", entity.PID, DbType.Int32);
             using (var connection = CreateConnection())
             {
-                return await connection.ExecuteAsync(query, parameters);
+                var retVal = await connection.ExecuteAsync(query, parameters);
+                if (retVal >= 0)
+                {
+                    return entity;
+                }
             }
-            
+            return null;
         }
 
         public async Task<int> DeleteAsync(int id)

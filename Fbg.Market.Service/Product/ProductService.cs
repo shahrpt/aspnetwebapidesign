@@ -1,4 +1,5 @@
-﻿using Fbg.Market.DbModel;
+﻿using Fbg.Market.Application;
+using Fbg.Market.DbModel;
 using Fbg.Market.Models.Product;
 using Fbg.Market.Repository.Product;
 using System;
@@ -40,9 +41,9 @@ namespace Fbg.Market.Service.Product
             throw new NotImplementedException();
         }
 
-        public Task<DbModel.Model.Product> Update(int id, UpdateProductModel model)
+        public async Task<DbModel.Model.Product> Update(int id, DbModel.Model.Product model)
         {
-            throw new NotImplementedException();
+            return await _productRepository.UpdateAsync(id, model);
         }
     }
 

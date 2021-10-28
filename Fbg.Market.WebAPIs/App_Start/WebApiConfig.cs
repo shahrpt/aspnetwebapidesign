@@ -9,17 +9,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 using Unity;
-
+using System.Web.Http.Cors;
 namespace Fbg.Market.WebAPIs
 {
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
         {
+            //var cors = new EnableCorsAttribute("www.example.com", "*", "*");
+            config.EnableCors();
             // Web API configuration and services
             var container = new UnityContainer();
             // register all your components with the container here
             // it is NOT necessary to register your controllers
+            container.RegisterType<IEntitlementRepository, EntitlementRepository>();
+            container.RegisterType<IEntitlementService, EntitlementService>();
             container.RegisterType<IVendorRepository, VendorRepository>();
             container.RegisterType<IVendorService, VendorService>();
 

@@ -42,11 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entitlement\EntitlementService.cs" />
     <Compile Include="Product\Communication\BaseResponse.cs" />
     <Compile Include="Product\Communication\ProductResponse.cs" />
     <Compile Include="Product\Communication\RequiredAttribute.cs" />
     <Compile Include="Product\Communication\UpdateProductModel.cs" />
-    <Compile Include="Product\IProductService.cs" />
     <Compile Include="Product\ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vendor\VendorService.cs" />
@@ -54,7 +54,6 @@
   <ItemGroup>
     <Folder Include="Client\" />
     <Folder Include="Common\" />
-    <Folder Include="Entitlement\" />
     <Folder Include="Role\" />
   </ItemGroup>
   <ItemGroup>

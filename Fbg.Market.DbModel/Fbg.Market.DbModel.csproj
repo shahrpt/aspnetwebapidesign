@@ -149,7 +149,6 @@
     <Compile Include="Model\Vendor.cs">
       <DependentUpon>FBGMarket.tt</DependentUpon>
     </Compile>
-    <Compile Include="Product_.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

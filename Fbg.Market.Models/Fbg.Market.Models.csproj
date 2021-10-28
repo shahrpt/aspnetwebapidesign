@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entitlement\CreateEntitlementModel.cs" />
+    <Compile Include="Entitlement\UpdateEntitlementModel.cs" />
+    <Compile Include="Entitlement\UserQuery.cs" />
     <Compile Include="Product\CreateProductModel.cs" />
     <Compile Include="Product\ProductQuery.cs" />
     <Compile Include="Product\UpdateProductModel.cs" />
@@ -50,7 +53,6 @@
   <ItemGroup>
     <Folder Include="Client\" />
     <Folder Include="Color\" />
-    <Folder Include="Entitlement\" />
     <Folder Include="Role\" />
     <Folder Include="Vendor\" />
   </ItemGroup>

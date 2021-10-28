@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Fbg.Market.Service.Product.Communication
 {
-    public class ProductResponse : BaseResponse<Product_>
+    /*public class ProductResponse : BaseResponse<DbModel.Product>
     {
-        public ProductResponse(Product_ product) : base(product) { }
+        public ProductResponse(Product product) : base(product) { }
 
         public ProductResponse(string message) : base(message) { }
-    }
+    }*/
 }

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F453F2AE-142A-4E26-BFCE-249F2ABE2B23}</ProjectGuid>
+    <ProjectGuid>{14C92787-A315-403E-80C4-B904A5FCAB7D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fbg.Market.Application</RootNamespace>
-    <AssemblyName>Fbg.Market.Application</AssemblyName>
+    <RootNamespace>Fbg.Market.Security</RootNamespace>
+    <AssemblyName>Fbg.Market.Security</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -41,27 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IClientService.cs" />
-    <Compile Include="IColorService.cs" />
-    <Compile Include="IEntitlementRepository.cs" />
-    <Compile Include="IEntitlementService.cs" />
-    <Compile Include="IProductRepository.cs" />
-    <Compile Include="IProductService.cs" />
-    <Compile Include="IRoleService.cs" />
-    <Compile Include="IUserService.cs" />
-    <Compile Include="IVendorRepository.cs" />
-    <Compile Include="IVendorService.cs" />
+    <Compile Include="ApiKeyHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Fbg.Market.DbModel\Fbg.Market.DbModel.csproj">
-      <Project>{457b3ea8-db27-4a28-8634-d5d256459502}</Project>
-      <Name>Fbg.Market.DbModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Fbg.Market.Models\Fbg.Market.Models.csproj">
-      <Project>{7a587da6-d399-4a8d-bdfb-4882917eea8f}</Project>
-      <Name>Fbg.Market.Models</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

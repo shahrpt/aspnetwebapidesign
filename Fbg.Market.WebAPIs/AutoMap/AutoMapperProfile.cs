@@ -14,6 +14,7 @@ namespace Fbg.Market.WebAPIs.AutoMap
         public AutoMapperProfile()
         {
             CreateMap<CreateProductModel, Product>();
+            CreateMap<UpdateProductModel, Product>();
         }
     }
 }

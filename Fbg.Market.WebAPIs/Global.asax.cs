@@ -1,3 +1,4 @@
+using Fbg.Market.WebAPIs.MessageHandler;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace Fbg.Market.WebAPIs
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
             AutoMap.AutoMap.RegisterMappings();
+            GlobalConfiguration.Configuration.MessageHandlers.Add(new APIKeyHandler());
         }
     }
 }

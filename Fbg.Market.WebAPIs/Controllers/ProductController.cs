@@ -13,9 +13,11 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace FBG.Market.WebAPIs.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProductController : ApiController
     {
         private readonly IProductService _productService;
@@ -40,30 +42,30 @@ namespace FBG.Market.WebAPIs.Controllers
         // GET api/values
         public async Task<IHttpActionResult> Get()
         {
-            var userDTO = AutoMap.Mapper.Map<CreateProductModel>(new CreateProductModel() { CategoryId = 1 });
+            
             var result = await _productService.Get();
             return Json(result);
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public async Task<IHttpActionResult> Get(int id)
         {
-            return "value";
+            var result = await _productService.Get(id);
+            return Json(result);
         }
-
-        // POST api/values
-        public void Post([FromBody] string value)
-        {
-        }
-
         // PUT api/values/5
-        public void Put(int id, [FromBody] string value)
+        public async Task<IHttpActionResult> Put(int id, [FromBody] UpdateProductModel updateProduct)
         {
+            var product = AutoMap.Mapper.Map<Product>(updateProduct);
+            var result = await _productService.Update(id, product);
+            return Ok(result);
         }
 
         // DELETE api/values/5
-        public void Delete(int id)
+        public async Task<IHttpActionResult> Delete(int id)
         {
+            var result = await _productService.Delete(id);
+            return Ok(result);
         }
     }
 }

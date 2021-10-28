@@ -82,8 +82,8 @@
   <ItemGroup>
     <Compile Include="BaseRespository.cs" />
     <Compile Include="DapperContext.cs" />
+    <Compile Include="Entitlement\EntitlementRepository.cs" />
     <Compile Include="ProductQueryProcessor.cs" />
-    <Compile Include="Product\IProductRepository.cs" />
     <Compile Include="Product\ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\IProductQueryProcessor.cs" />
