@@ -54,10 +54,10 @@ namespace FBG.Market.WebAPIs.Controllers
             return Json(result);
         }
         // PUT api/values/5
-        public async Task<IHttpActionResult> Put(int id, [FromBody] UpdateProductModel updateProduct)
+        public async Task<IHttpActionResult> Put([FromBody] UpdateProductModel updateProduct)
         {
             var product = AutoMap.Mapper.Map<Product>(updateProduct);
-            var result = await _productService.Update(id, product);
+            var result = await _productService.Update(product.PID, product);
             return Ok(result);
         }
 

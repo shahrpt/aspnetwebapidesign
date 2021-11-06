@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.Application", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.WebAPIs", "Fbg.Market.WebAPIs\Fbg.Market.WebAPIs.csproj", "{576180AA-38BA-4682-ACE1-F48FCB5FEC62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fbg.Market.WebAPIs.Tests", "Fbg.Market.WebAPIs.Tests\Fbg.Market.WebAPIs.Tests.csproj", "{534A2994-D16B-4659-B54F-E964E59043E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{576180AA-38BA-4682-ACE1-F48FCB5FEC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{576180AA-38BA-4682-ACE1-F48FCB5FEC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{576180AA-38BA-4682-ACE1-F48FCB5FEC62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534A2994-D16B-4659-B54F-E964E59043E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534A2994-D16B-4659-B54F-E964E59043E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534A2994-D16B-4659-B54F-E964E59043E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534A2994-D16B-4659-B54F-E964E59043E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

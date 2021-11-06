@@ -33,12 +33,13 @@ namespace Fbg.Market.Service.Product
         public async Task<IEnumerable<DbModel.Model.Product>> Get()
         {
             ProductsQuery query = new ProductsQuery();
+            
             return await _productRepository.ListAsync(query);
         }
 
-        public Task<DbModel.Model.Product> Get(int id)
+        public async Task<DbModel.Model.Product> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _productRepository.FindByIdAsync(id);
         }
 
         public async Task<DbModel.Model.Product> Update(int id, DbModel.Model.Product model)

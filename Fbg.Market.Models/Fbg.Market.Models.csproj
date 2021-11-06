@@ -47,6 +47,7 @@
     <Compile Include="Entitlement\UserQuery.cs" />
     <Compile Include="Product\CreateProductModel.cs" />
     <Compile Include="Product\ProductQuery.cs" />
+    <Compile Include="Product\ProductResponse.cs" />
     <Compile Include="Product\UpdateProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

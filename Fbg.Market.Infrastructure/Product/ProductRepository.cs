@@ -23,7 +23,7 @@ namespace Fbg.Market.Repository.Product
         }*/
         public async Task<List<DbModel.Model.Product>> GetAllAsync()
         {
-            var query = "SELECT * FROM Products";
+            var query = "SELECT * FROM Products Where ProductStatusId  <> 5 ";
             using (var connection = CreateConnection())
             {
                 var products = await connection.QueryAsync<DbModel.Model.Product>(query);
@@ -92,10 +92,16 @@ namespace Fbg.Market.Repository.Product
             parameters.Add("@PID", entity.PID, DbType.Int32);
             using (var connection = CreateConnection())
             {
-                var retVal = await connection.ExecuteAsync(query, parameters);
-                if (retVal >= 0)
+                try
                 {
-                    return entity;
+                    var retVal = await connection.ExecuteAsync(query, parameters);
+                    if (retVal >= 0)
+                    {
+                        return entity;
+                    }
+                }catch(Exception ex)
+                {
+
                 }
             }
             return null;
@@ -112,7 +118,8 @@ namespace Fbg.Market.Repository.Product
 
         public async Task<IEnumerable<DbModel.Model.Product>> ListAsync(ProductsQuery input)
         {
-            var query = "SELECT * FROM Products";
+            var query = @"SELECT *
+      FROM Products Where ProductStatusId  <> 5";
             using (var connection = CreateConnection())
             {
                 var products = await connection.QueryAsync<DbModel.Model.Product>(query);
@@ -136,7 +143,6 @@ namespace Fbg.Market.Repository.Product
            ,[PDescription]
            ,[PSpecs]
            ,[PCoutryofOrigin]
-           ,[PDiscontinued]
            ,[PFOBCost]
            ,[PLandedCost]
            ,[PWholesalePrice]
@@ -178,7 +184,7 @@ namespace Fbg.Market.Repository.Product
             parameters.Add("@PName", entity.PName, DbType.String);
             parameters.Add("@PColor", entity.PColor, DbType.String);
             parameters.Add("@PSize", entity.PSize, DbType.String);
-            parameters.Add("@PCategory", entity.PCategory, DbType.String);
+            parameters.Add("@PCategory", entity.PCategory, DbType.Int32);
             parameters.Add("@PSubCategory", entity.PSubCategory, DbType.String);
             parameters.Add("@NRFColorCodeID", entity.NRFColorCodeID, DbType.Int32);
             parameters.Add("@SID", entity.SID, DbType.Int32);
@@ -198,17 +204,32 @@ namespace Fbg.Market.Repository.Product
 
             using (var connection = CreateConnection())
             {
-                var id = await connection.QuerySingleAsync<int>(query, parameters);
-                return new DbModel.Model.Product() { PID=id };
+                try
+                {
+                    var id = await connection.ExecuteAsync(query, parameters);
+                    return new DbModel.Model.Product() { PID = id };
+                }
+                catch(Exception ex)
+                {
+                    return null;
+                }
             }
         }
 
         public async Task<DbModel.Model.Product> FindByIdAsync(int id)
         {
-            var query = "SELECT * FROM Products";
+            var query = "SELECT * FROM Products where PID = @PID";
+            var parameters = new DynamicParameters();
+            parameters.Add("@PID", id, DbType.Int32);
             using (var connection = CreateConnection())
             {
-                return await connection.QuerySingleAsync<DbModel.Model.Product>(query);
+                try
+                {
+                    return await connection.QuerySingleAsync<DbModel.Model.Product>(query, parameters);
+                }catch(Exception ex)
+                {
+                    return null;
+                }
             }
         }
     }
